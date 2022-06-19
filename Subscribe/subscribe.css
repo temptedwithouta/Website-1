@@ -1,0 +1,901 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  background-color: #f9f5f2;
+  width: 100%;
+}
+
+h1 {
+  line-height: 64px;
+  font-size: 50px;
+  color: #222;
+}
+
+h2 {
+  line-height: 54px;
+  font-size: 46px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+p {
+  color: #465b52;
+  font-size: 16px;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  padding: 15px 30px;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s;
+  outline: none;
+}
+
+button.white {
+  padding: 11px 18px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  transition: 0.2s;
+  outline: none;
+}
+
+/* Header */
+
+#header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  background: #f9f5f2;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  */
+  transition: 2s;
+}
+
+#header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .navbar li {
+  position: relative;
+  padding: 0 20px;
+  list-style: none;
+}
+
+#header .navbar li:nth-child(6) {
+  padding-right: 0;
+}
+
+#header .navbar li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+#header .navbar #lg-bag {
+  font-size: 26px;
+}
+
+#header .navbar .subscribe {
+  display: flex;
+  background-color: #167d7f;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+#header .navbar #close {
+  display: none;
+}
+
+#header .navbar .navbar-normal:hover,
+#header .navbar .navbar-normal.active {
+  color: #167d7f;
+}
+
+#header .navbar .subscribe:hover {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#header .navbar .navbar-normal:hover::after,
+#header .navbar .navbar-normal.active::after {
+  position: absolute;
+  width: 30%;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  background: #167d7f;
+  left: 20px;
+}
+
+#header #mobile {
+  display: none;
+  cursor: pointer;
+}
+
+/* Akhir header */
+
+/* Hero */
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  height: 18vh;
+  width: 100%;
+  padding: 20px 80px;
+  /* background-image: url("img/about/su-san-lee-E_eWwM29wfU-unsplash.jpg"); */
+  background-color: #167d7f;
+}
+
+#hero h2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* width: 39.4%; */
+  font-size: 26px;
+  color: #fff;
+}
+
+#hero h2:nth-child(2) {
+  font-weight: 600;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#hero h2:nth-child(2) a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#hero h2:nth-child(2) a:nth-child(1) {
+  margin-right: 6px;
+}
+
+#hero h2 span {
+  color: rgb(243, 181, 25);
+  margin-left: 6px;
+}
+
+/* Akhir hero */
+
+/* Feature */
+
+#product1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 24px;
+  width: 80%;
+  margin: 40px auto 40px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .slider-feature-container {
+  position: relative;
+  background: #fff;
+  width: 50%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+}
+
+#product1 .slider-feature-container .slide-feature {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+#product1 .slider-feature-container .slide-feature.active-feature {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+#product1 .slider-feature-container .slide-feature img {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#product1 .slider-feature-container .slide-feature .info {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 60%;
+  /*margin-top: 50px;
+  margin-left: 50px;
+  */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#product1 .slider-feature-container .slide-feature .info h2 {
+  font-size: 1.6em;
+  font-weight: 800;
+}
+
+#product1 .slider-feature-container .navigation-feature {
+  height: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#product1 .slider-feature-container:hover .navigation-feature {
+  opacity: 1;
+}
+
+#product1 .slider-feature-container .navigation-feature .prev-btn,
+#product1 .slider-feature-container .navigation-feature .next-btn {
+  z-index: 999;
+  font-size: 46px;
+  color: #222;
+  padding: 20px;
+  cursor: pointer;
+  color: #167d7f;
+}
+
+#product1 .slider-feature-container .navigation-feature-visibility {
+  z-index: 999;
+  display: none;
+  justify-content: center;
+}
+
+#product1 .slider-feature-container .navigation-feature-visibility .slide-icon-feature {
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 50%;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+#product1 .slider-feature-container .navigation-feature-visibility .slide-icon-feature.active-feature {
+  background: #167d7f;
+}
+
+/* Akhir feature */
+
+/* Form */
+
+#product1 .form-subscribe {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+#product1 .form-subscribe form .heading h2 {
+  padding-bottom: 30px;
+}
+
+#product1 .form-subscribe form .textbox,
+#product1 .form-subscribe form .check {
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#product1 .form-subscribe form .textbox h4 {
+  margin-bottom: 8px;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 46px;
+}
+
+#product1 .form-subscribe form .check .check-inner {
+  position: relative;
+}
+
+#product1 .form-subscribe form .check .check-inner #terms {
+  cursor: pointer;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner i {
+  position: absolute;
+  font-size: 18px;
+  left: 16px;
+  z-index: 999;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner input,
+#product1 .form-subscribe form .textbox .textbox-inner select {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #dddddd;
+  padding: 0 40px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,00 50,50" style="fill:%23000;"/></svg>');
+  background-position: right 16px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner select option {
+  background: #fff;
+  outline: none;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner #country {
+  cursor: pointer;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner #error-name1,
+#product1 .form-subscribe form .textbox .textbox-inner #error-email1,
+#product1 .form-subscribe form .textbox .textbox-inner #error-phone1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner #error-country1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner #error-name1 i,
+#product1 .form-subscribe form .textbox .textbox-inner #error-email1 i,
+#product1 .form-subscribe form .textbox .textbox-inner #error-phone1 i,
+#product1 .form-subscribe form .textbox .textbox-inner #error-country1 i {
+  color: seagreen;
+  font-size: 20px;
+}
+
+#product1 .form-subscribe form .textbox #error-name2,
+#product1 .form-subscribe form .textbox #error-email2,
+#product1 .form-subscribe form .textbox #error-phone2,
+#product1 .form-subscribe form .textbox #error-country2,
+#product1 .form-subscribe form .check #error-terms2 {
+  color: red;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner select:required:invalid {
+  color: #666;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner select option[value=""][disabled] {
+  display: none;
+}
+
+#product1 .form-subscribe form .textbox .textbox-inner option {
+  color: #000;
+}
+
+#product1 .form-subscribe form .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#product1 .form-subscribe form .button {
+  background-color: #167d7f;
+  width: 100%;
+  height: 50px;
+  font-weight: 700;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  transition: ease-out 0.3s;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+#product1 .form-subscribe form .button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .form-subscribe form .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product1 .form-subscribe form .login span {
+  color: #167d7f;
+}
+
+/* Akhir form */
+
+/* Newsletter */
+
+#newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("img/banner/newsletter.png");
+  background-color: #041e42;
+  /* background-position: 20% 30%; */
+  /* background-repeat: no-repeat; */
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#newsletter p {
+  color: #ffbd27;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#newsletter .form {
+  width: 46%;
+  display: flex;
+}
+
+#newsletter input {
+  width: 100%;
+  border-radius: 4px;
+  height: 3.125rem;
+  font-size: 14px;
+  padding: 0 1.25em;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+#newsletter button {
+  margin-left: 10px;
+  white-space: nowrap;
+  background-color: #167d7f;
+  color: #fff;
+}
+
+#newsletter button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Akhir newsletter */
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-class {
+  padding: 20px 80px;
+}
+
+footer .col {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+}
+
+footer .col .menu-nav {
+  margin-bottom: 30px;
+}
+
+footer .col .menu-nav a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #222;
+  font-weight: 700;
+}
+
+footer .col .menu-nav a.active-footer {
+  color: #167d7f;
+}
+
+footer .col .col-details {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+footer .col .logo {
+  margin-bottom: 30px;
+}
+
+footer .col h4 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+footer .col .col-details p {
+  margin-top: 12px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+footer .col .col-details i {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  width: 41px;
+  height: 41px;
+  /* border: 1px solid #f3e6dc; */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+footer .col a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #222;
+}
+
+footer .follow .company-details p {
+  word-wrap: break-word;
+  margin-top: 0;
+}
+
+footer .follow i {
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  width: 41px;
+  height: 41px;
+  /* border: 1px solid #f3e6dc; */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+footer .follow i:hover,
+footer .col .col-details i:hover,
+footer .col a:hover {
+  color: #167d7f;
+}
+
+/* Akhir footer */
+
+/* Responsive 1 */
+
+@media (max-width: 1200px) {
+  .section-p1 {
+    padding: 40px 10px;
+  }
+
+  #header .navbar li {
+    position: relative;
+    padding: 0 14px;
+    list-style: none;
+  }
+
+  #product1 {
+    width: 100%;
+  }
+
+  footer .menu {
+    width: 20%;
+  }
+
+  footer .contact {
+    width: 40%;
+  }
+
+  footer .follow {
+    width: 30%;
+  }
+}
+
+/* Akhir responsive 1 */
+
+/* Responsive 2 */
+
+@media (max-width: 900px) {
+  #header {
+    padding: 20px 60px;
+  }
+
+  #header .navbar li {
+    padding: 0 6px;
+  }
+
+  #hero {
+    padding: 20px 60px 0;
+  }
+
+  #product1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Akhir responsive 2 */
+
+/* Responsive 3 */
+
+@media (max-width: 800px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  #header {
+    padding: 20px 40px;
+  }
+
+  #header .navbar {
+    width: 300px;
+    height: 100vh;
+    padding: 80px 0 0 10px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    background-color: #f9f5f2;
+    transition: 0.4s;
+  }
+
+  #header .navbar.active {
+    right: 0;
+  }
+
+  #header .navbar li {
+    margin-bottom: 36px;
+  }
+
+  #header #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #header #mobile i {
+    font-size: 24px;
+    color: #1a1a1a;
+    padding-left: 20px;
+  }
+
+  #header #mobile a i:hover {
+    color: #167d7f;
+  }
+
+  #header #mobile {
+    position: relative;
+  }
+
+  #header #mobile a:hover::after,
+  #header #mobile a.active::after {
+    position: absolute;
+    width: 30%;
+    content: "";
+    height: 2px;
+    bottom: -4px;
+    background: #167d7f;
+    left: 18px;
+  }
+
+  #header .navbar #close {
+    display: initial;
+    color: #222;
+    font-size: 24px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  #lg-bag {
+    display: none;
+  }
+
+  #hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #product1 {
+    width: 80%;
+    height: 100%;
+    padding-bottom: 40px;
+  }
+
+  #product1 .slider-feature-container {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  #product1 .form-subscribe {
+    padding-top: 40px;
+    width: 100%;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  footer .col {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  footer .follow .company-details p {
+    text-align: left;
+  }
+}
+
+/* Akhir responsive 3 */
+
+/* Responsive 4 */
+
+@media (max-width: 600px) {
+
+  #product1 {
+    width: 100%;
+    padding: 0 0 40px;
+  }
+
+  #product1 .slider-feature-container .slide-feature .info h2 {
+    font-size: 1.46em;
+  }
+}
+
+/* Akhir responsive 4 */
+
+/* Responsive 4 */
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .section-p1 {
+    padding: 20px;
+  }
+
+  #header {
+    padding: 10px 30px;
+  }
+
+  #hero {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #newsletter {
+    padding: 40px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+}
+
+/* Akhir responsive 4 */
+
+/* Responsive 5 */
+
+@media (max-width: 450px) {
+  #header .navbar {
+    width: 260px;
+  }
+
+  #hero h2 {
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+
+  #hero h2:nth-child(2) {
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+}
+
+/* Akhir responsive 5 */

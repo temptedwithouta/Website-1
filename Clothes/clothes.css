@@ -1,0 +1,791 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  background-color: #f9f5f2;
+  width: 100%;
+}
+
+h1 {
+  line-height: 64px;
+  font-size: 50px;
+  color: #222;
+}
+
+h2 {
+  line-height: 54px;
+  font-size: 46px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+p {
+  color: #465b52;
+  font-size: 16px;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  padding: 15px 30px;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s;
+  outline: none;
+}
+
+button.white {
+  padding: 11px 18px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fff;
+  transition: 0.2s;
+  outline: none;
+}
+
+/* Header */
+
+#header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  background: #f9f5f2;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  */
+  transition: 2s;
+}
+
+#header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .navbar li {
+  position: relative;
+  padding: 0 20px;
+  list-style: none;
+}
+
+#header .navbar li:nth-child(6) {
+  padding-right: 0;
+}
+
+#header .navbar li a {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+#header .navbar #lg-bag {
+  font-size: 26px;
+}
+
+#header .navbar .subscribe {
+  display: flex;
+  background-color: #167d7f;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+#header .navbar #close {
+  display: none;
+  cursor: pointer;
+}
+
+#header .navbar .navbar-normal:hover,
+#header .navbar .navbar-normal.active {
+  color: #167d7f;
+}
+
+#header .navbar .subscribe:hover {
+  color: #222;
+  background-color: #fff;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#header .navbar .navbar-normal:hover::after,
+#header .navbar .navbar-normal.active::after {
+  position: absolute;
+  width: 30%;
+  content: "";
+  height: 2px;
+  bottom: -4px;
+  background: #167d7f;
+  left: 20px;
+}
+
+#header #mobile {
+  display: none;
+  cursor: pointer;
+}
+
+/* Akhir header */
+
+/* Hero */
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  height: 18vh;
+  width: 100%;
+  padding: 20px 80px;
+  /* background-image: url("img/about/su-san-lee-E_eWwM29wfU-unsplash.jpg"); */
+  background-color: #167d7f;
+}
+
+#hero h2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* width: 39.4%; */
+  font-size: 26px;
+  color: #fff;
+}
+
+#hero h2:nth-child(2) {
+  font-weight: 600;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#hero h2:nth-child(2) a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#hero h2:nth-child(2) a:nth-child(1) {
+  margin-right: 6px;
+}
+
+#hero h2 span {
+  color: rgb(243, 181, 25);
+  margin-left: 6px;
+}
+
+#hero2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  height: 10vh;
+  /* background-image: url("img/about/su-san-lee-E_eWwM29wfU-unsplash.jpg"); */
+  background-size: cover;
+  margin: 20px 80px 0;
+}
+
+#hero2 h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #222;
+}
+
+#hero2 h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: rgb(162, 160, 160);
+  cursor: pointer;
+}
+
+#hero2 h4 i {
+  margin-left: 8px;
+}
+
+#hero2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #167d7f;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Akhir hero */
+
+/* Pagination */
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  padding: 15px 20px;
+  background-color: #167d7f;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#pagination a:hover {
+  color: #222;
+  background: #fff;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Akhir pagination */
+
+/* Feature products */
+
+#product1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#product1 .pro-container {
+  display: flex;
+  /* padding-top: 20px; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#product1 .pro-container .pro {
+  position: relative;
+  background-color: #fff;
+  /* border: 1px solid #f3e6dc; */
+  /* border: 1px solid #cce7d0; */
+  min-width: 250px;
+  width: 23%;
+  margin: 15px 0;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  transition: 0.2s ease;
+}
+
+#product1 .pro-container .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro-container .pro img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+#product1 .pro-container .pro .des {
+  padding: 10px 0;
+  text-align: start;
+}
+
+#product1 .pro-container .pro .des span {
+  font-size: 12px;
+  color: #606063;
+}
+
+#product1 .pro-container .pro .des h5 {
+  color: #1a1a1a;
+  padding-top: 7px;
+  font-family: 14px;
+}
+
+#product1 .pro-container .pro .des .star {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#product1 .pro-container .pro .des i {
+  color: rgb(243, 181, 25);
+  font-size: 12px;
+  padding-right: 6px;
+}
+
+#product1 .pro-container .pro .des h4 {
+  font-size: 15px;
+  padding-top: 7px;
+  color: #167d7f;
+  font-weight: 700;
+}
+
+#product1 .pro-container .pro .cart {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 10px;
+  bottom: 20px;
+  line-height: 40px;
+  border-radius: 50px;
+  /* font-weight: 500; */
+  color: #167d7f;
+  background-color: #e8f6ea;
+  border: 1px solid #cce7d0;
+}
+
+#product1 .pro-container .pro .cart:hover {
+  background-color: #fff;
+}
+
+/* Akhir feature products */
+
+/* Newsletter */
+
+#newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("img/banner/newsletter.png");
+  background-color: #041e42;
+  /* background-position: 20% 30%;
+  background-repeat: no-repeat; */
+}
+
+#newsletter h4 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#newsletter p {
+  color: #ffbd27;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#newsletter .form {
+  width: 46%;
+  display: flex;
+}
+
+#newsletter input {
+  width: 100%;
+  border-radius: 4px;
+  height: 3.125rem;
+  font-size: 14px;
+  padding: 0 1.25em;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+#newsletter button {
+  margin-left: 10px;
+  white-space: nowrap;
+  background-color: #167d7f;
+  color: #fff;
+}
+
+#newsletter button:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Akhir newsletter */
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-class {
+  padding: 20px 80px;
+}
+
+footer .col {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+}
+
+footer .col .menu-nav {
+  margin-bottom: 30px;
+}
+
+footer .col .menu-nav a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #222;
+  font-weight: 700;
+}
+
+footer .col .menu-nav a.active-footer {
+  color: #167d7f;
+}
+
+footer .col .col-details {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+footer .col .logo {
+  margin-bottom: 30px;
+}
+
+footer .col h4 {
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+footer .col .col-details p {
+  margin-top: 12px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+footer .col .col-details i {
+  background-color: #fff;
+  color: #222;
+  font-size: 14px;
+  width: 41px;
+  height: 41px;
+  /* border: 1px solid #f3e6dc; */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+footer .col a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #222;
+}
+
+footer .follow .company-details p {
+  word-wrap: break-word;
+  margin-top: 0;
+}
+
+footer .follow i {
+  background-color: #fff;
+  color: #222;
+  font-size: 14px;
+  width: 41px;
+  height: 41px;
+  /* border: 1px solid #f3e6dc; */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+footer .follow i:hover,
+footer .col .col-details i:hover,
+footer .col a:hover {
+  color: #167d7f;
+}
+
+/* Akhir footer */
+
+/* Responsive 1 */
+
+@media (max-width: 1200px) {
+  .section-p1 {
+    padding: 40px 10px;
+  }
+
+  #header .navbar li {
+    position: relative;
+    padding: 0 14px;
+    list-style: none;
+  }
+
+  footer .menu {
+    width: 20%;
+  }
+
+  footer .contact {
+    width: 40%;
+  }
+
+  footer .follow {
+    width: 30%;
+  }
+}
+
+/* Akhir responsive 1 */
+
+/* Responsive 2 */
+
+@media (max-width: 900px) {
+  #header {
+    padding: 20px 60px;
+  }
+
+  #header .navbar li {
+    padding: 0 6px;
+  }
+
+  #hero {
+    padding: 20px 60px 0;
+  }
+
+  #hero2 {
+    margin: 20px 60px 0;
+  }
+}
+
+/* Akhir responsive 2 */
+
+/* Responsive 3 */
+
+@media (max-width: 800px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+
+  #header {
+    padding: 20px 40px;
+  }
+
+  #header .navbar {
+    width: 300px;
+    height: 100vh;
+    padding: 80px 0 0 10px;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    background-color: #f9f5f2;
+    transition: 0.4s;
+  }
+
+  #header .navbar.active {
+    right: 0;
+  }
+
+  #header .navbar li {
+    margin-bottom: 36px;
+  }
+
+  #header #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #header #mobile i {
+    font-size: 24px;
+    color: #1a1a1a;
+    padding-left: 20px;
+  }
+
+  #header #mobile a i:hover {
+    color: #167d7f;
+  }
+
+  #header #mobile {
+    position: relative;
+  }
+
+  #header #mobile a:hover::after,
+  #header #mobile a.active::after {
+    position: absolute;
+    width: 30%;
+    content: "";
+    height: 2px;
+    bottom: -4px;
+    background: #167d7f;
+    left: 18px;
+  }
+
+  #header .navbar #close {
+    display: initial;
+    color: #222;
+    font-size: 24px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  #lg-bag {
+    display: none;
+  }
+
+  #hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #hero2 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  /* #hero2 h2 {
+    width: 50%;
+  }
+
+  #hero2 h4 {
+    width: 50%;
+  } */
+
+  #product1 .pro-container {
+    justify-content: space-around;
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+
+  footer .col {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  footer .follow .company-details p {
+    text-align: left;
+  }
+}
+
+/* Akhir responsive 3 */
+
+/* Responsive 4 */
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .section-p1 {
+    padding: 20px;
+  }
+
+  #header {
+    padding: 10px 30px;
+  }
+
+  #hero {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #hero2 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  #hero2 h2 {
+    font-size: 20px;
+  }
+
+  #hero2 h4 {
+    font-size: 12px;
+  }
+
+  #product1 .pro {
+    width: 100%;
+  }
+
+  #newsletter {
+    padding: 40px;
+  }
+
+  #newsletter .form {
+    width: 100%;
+  }
+}
+
+/* Akhir responsive 4 */
+
+/* Responsive 5 */
+
+@media (max-width: 450px) {
+  #header .navbar {
+    width: 260px;
+  }
+
+  #hero h2 {
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+
+  #hero h2:nth-child(2) {
+    width: 100%;
+    height: 30%;
+    justify-content: center;
+  }
+}
+
+/* Akhir responsive 5 */
+
+/* Responsive 6 */
+
+@media (max-width: 340px) {
+  #hero2 h2 {
+    font-size: 16px;
+  }
+
+  #hero2 h4 {
+    font-size: 12px;
+  }
+}
+
+/* Akhir responsive 6 */
